@@ -3,4 +3,8 @@
     <string name="title">Title</string>
     <string name="lire_l_article">Lire l\'article</string>
     <string name="partager">Partager</string>
+    <string name="mes_favoris">Mes favoris</string>
+    <string name="accueil">Accueil</string>
+    <string name="voir">Voir</string>
+    <string name="image">Image</string>
 </resources>

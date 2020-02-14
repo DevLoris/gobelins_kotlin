@@ -6,8 +6,8 @@
 
     <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="Image"
+            android:layout_height="200dp"
+            android:contentDescription="@string/image"
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/image"
             app:layout_constraintTop_toTopOf="parent"
@@ -32,7 +32,6 @@
             android:layout_height="wrap_content"
             android:textColor="#fff"
             android:layout_margin="10dp"
-            android:text="test"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title_article"/>
@@ -40,7 +39,7 @@
     <com.google.android.material.button.MaterialButton
             app:layout_constraintTop_toBottomOf="@id/description_article"
             android:id="@+id/material_icon_button"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             app:layout_constraintEnd_toStartOf="@id/button_share"
             style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
             android:layout_width="wrap_content"
@@ -50,7 +49,7 @@
     <com.google.android.material.button.MaterialButton
             app:layout_constraintTop_toBottomOf="@id/description_article"
             android:id="@+id/favorite_button"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             app:layout_constraintStart_toStartOf="parent"
             style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
             android:layout_width="wrap_content"
@@ -62,7 +61,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
             android:layout_width="wrap_content"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_height="wrap_content"
             android:text="@string/partager"
             app:icon="@drawable/ic_share_black_24dp"/>

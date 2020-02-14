@@ -12,9 +12,9 @@
             style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Mes favoris"
+            android:text="@string/mes_favoris"
             app:icon="@drawable/ic_star_black_24dp"/>
 
 
@@ -25,9 +25,8 @@
             style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-
-            android:text="Accueil"
+            android:layout_marginStart="10dp"
+            android:text="@string/accueil"
             app:icon="@drawable/ic_home_black_24dp"/>
 
     <FrameLayout

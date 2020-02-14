@@ -18,6 +18,7 @@ import android.net.Uri
 import android.text.Html
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
 import dev.pinna.news.models.Article
 
 
@@ -52,34 +53,37 @@ class ArticleDetailsFragment : Fragment() {
             viewModel.toggleFavoriteOnActual()
             Log.i("FAVORITE", "Favorite")
         }
+        button_share.setOnClickListener {_->
+            var article = viewModel.actualArticle.value ?: return@setOnClickListener
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, article.title)
+                type = "text/plain"
+            }
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)
+        }
+        material_icon_button.setOnClickListener{_ ->
+            var article = viewModel.actualArticle.value ?: return@setOnClickListener
+            val path = Uri.parse(article.url)
+            val intent = Intent(Intent.ACTION_VIEW, path)
+            context.startActivity(intent)
+        }
 
         viewModel.actualArticle.observe(viewLifecycleOwner, Observer {
             Log.i("FAVORITE", "Update")
             title_article.html(it.title.coronavirus())
           //  title_article.text = it.title
-            Picasso.get().load(it.urlToImage).into(image)
+          //  Picasso.get().load(it.urlToImage).into(image)
             description_article.html(it.description.coronavirus())
-
-            material_icon_button.setOnClickListener{_ ->
-                val path = Uri.parse(it.url)
-                val intent = Intent(Intent.ACTION_VIEW, path)
-                context.startActivity(intent)
-            }
+            Glide.with(context)
+                .load(it.urlToImage)
+                .centerCrop()
+                .into(image)
 
             favorite_button.icon = when( it.favorite ) {
                 true -> ContextCompat.getDrawable(context, R.drawable.ic_star_black_24dp)
                 false -> ContextCompat.getDrawable(context, R.drawable.ic_star_border_black_24dp)
-            }
-
-
-            button_share.setOnClickListener {_->
-                val sendIntent: Intent = Intent().apply {
-                    action = Intent.ACTION_SEND
-                    putExtra(Intent.EXTRA_TEXT, it.title)
-                    type = "text/plain"
-                }
-                val shareIntent = Intent.createChooser(sendIntent, null)
-                startActivity(shareIntent)
             }
         })
     }
