@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">DMII</string>
+    <string name="entrez_le_premier_nombre">Entrez le premier nombre</string>
+    <string name="entrez_le_second_nombre">Entrez le second nombre</string>
+    <string name="calcul">Calculer</string>
+    <string name="result">La somme est %s</string>
+    <string name="number_error">Erreur</string>
+</resources>

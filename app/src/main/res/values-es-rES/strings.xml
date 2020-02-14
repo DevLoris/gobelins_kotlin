@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DMII</string>
+    <string name="calcul">Calcular</string>
+    <string name="entrez_le_premier_nombre">Entre primero numero</string>
+    <string name="entrez_le_second_nombre">Entre secondo numero</string>
+    <string name="result">Es %s</string>
+    <string name="number_error">Error</string>
+</resources>

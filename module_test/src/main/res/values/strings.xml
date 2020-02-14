@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">module_test</string>
+    <string name="addition">Addition</string>
+    <string name="soustraction">Soustraction</string>
+    <string name="multiplication">Multiplication</string>
+    <string name="division">Division</string>
+    <string name="premier_nombre">Premier nombre</string>
+    <string name="second_nombre">Second nombre</string>
+    <string name="calcul">Calcul</string>
+    <string name="number_error">Erreur</string>
+    <string name="result">Resultat %s</string>
+</resources>
